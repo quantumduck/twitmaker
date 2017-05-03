@@ -6,10 +6,11 @@ $(function() {
     $.ajax({
       url: $(this).attr('action'),
       method: $(this).attr('method'),
-      dataType: 'html',
+      dataType: 'json',
       data: $(this).serialize()
     }).done(function(data) {
-      $('.tweets').first().prepend(data);
+      console.log(data);
+      // $('.tweets').first().prepend(data);
     }).fail(function(error) {
       console.log(error);
     }).always();
